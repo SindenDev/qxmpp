@@ -24,16 +24,17 @@ include(server/server.pri)
 HEADERS += $$INSTALL_HEADERS
 
 # Installation
+
 headers.files = $$INSTALL_HEADERS
-headers.path = $$PREFIX/include/qxmpp
-target.path = $$PREFIX/$$LIBDIR
+headers.path = $$INSTALL_ROOT/include/qxmpp
+target.path = $$INSTALL_ROOT/$$LIBDIR
 INSTALLS += headers target
 
 # pkg-config support
 CONFIG += create_pc create_prl no_install_prl
 QMAKE_PKGCONFIG_DESTDIR = pkgconfig
-QMAKE_PKGCONFIG_LIBDIR = $$target.path
-QMAKE_PKGCONFIG_INCDIR = $$headers.path
+QMAKE_PKGCONFIG_LIBDIR = ${prefix}/$$LIBDIR
+QMAKE_PKGCONFIG_INCDIR = ${prefix}/include/qxmpp
 equals(QXMPP_LIBRARY_TYPE,staticlib) {
     QMAKE_PKGCONFIG_CFLAGS = -DQXMPP_STATIC
 } else {
