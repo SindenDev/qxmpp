@@ -24,7 +24,9 @@ INSTALL_HEADERS += \
     base/QXmppResultSet.h \
     base/QXmppRosterIq.h \
     base/QXmppRpcIq.h \
+    base/QXmppRtcpPacket.h \
     base/QXmppRtpChannel.h \
+    base/QXmppRtpPacket.h \
     base/QXmppSessionIq.h \
     base/QXmppSocks.h \
     base/QXmppStanza.h \
@@ -38,7 +40,8 @@ INSTALL_HEADERS += \
 HEADERS += \
     base/QXmppCodec_p.h \
     base/QXmppSasl_p.h \
-    base/QXmppStreamInitiationIq_p.h
+    base/QXmppStreamInitiationIq_p.h \
+    base/QXmppStun_p.h
 
 # Source files
 SOURCES += \
@@ -67,7 +70,9 @@ SOURCES += \
     base/QXmppResultSet.cpp \
     base/QXmppRosterIq.cpp \
     base/QXmppRpcIq.cpp \
+    base/QXmppRtcpPacket.cpp \
     base/QXmppRtpChannel.cpp \
+    base/QXmppRtpPacket.cpp \
     base/QXmppSasl.cpp \
     base/QXmppSessionIq.cpp \
     base/QXmppSocks.cpp \
