@@ -26,8 +26,8 @@ HEADERS += $$INSTALL_HEADERS
 # Installation
 
 headers.files = $$INSTALL_HEADERS
-headers.path = $$INSTALL_ROOT/include/qxmpp
-target.path = $$INSTALL_ROOT/$$LIBDIR
+headers.path = $$PREFIX/include/qxmpp
+target.path = $$PREFIX/$$LIBDIR
 INSTALLS += headers target
 
 # pkg-config support
